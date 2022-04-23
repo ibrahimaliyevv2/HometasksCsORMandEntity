@@ -1,12 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using Microsoft.EntityFrameworkCore;
 using StadiumTaskEntity.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace StadiumTaskEntity.DAL
 {
-    class StadiumDbContext:DbContext
+    public class StadiumDbContext:DbContext
     {
         public DbSet<Stadium> Stadiums { get; set; }
         public DbSet<User> Users { get; set; }
@@ -14,7 +12,7 @@ namespace StadiumTaskEntity.DAL
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-KA8SSD4;Database=StadiumDB;Trusted_Connection=TRUE");
+            optionsBuilder.UseSqlServer("Server=127.0.0.1;Database=StadiumDB;User Id=sa;Password=MyPass@word");
         }
     }
 }

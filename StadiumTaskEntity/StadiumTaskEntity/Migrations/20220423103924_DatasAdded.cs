@@ -2,7 +2,7 @@
 
 namespace StadiumTaskEntity.Migrations
 {
-    public partial class UsersAndReservationsTablesCreated : Migration
+    public partial class DatasAdded : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
